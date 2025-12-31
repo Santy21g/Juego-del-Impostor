@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego del Impostor ⚽</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <h1>⚽ Juego del Impostor</h1>
+
+  <div class="panel">
+
+    <div class="select-group">
+      <label for="playerSelect">Cantidad de jugadores</label>
+      <select id="playerSelect" onchange="setPlayerCount(this.value)">
+        <option value="" disabled selected>Elegir</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </div>
+
+    <div class="select-group">
+      <label for="impostorSelect">Cantidad de impostores</label>
+      <select id="impostorSelect" onchange="setImpostors(this.value)">
+        <option value="" disabled selected>Elegir</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="actions">
+    <button class="start" onclick="startRound()">▶ Iniciar ronda</button>
+    <button class="new-round" onclick="startRound()">🔄 Nueva ronda</button>
+  </div>
+
+  <div class="players" id="players"></div>
+
+</body>
+</html>

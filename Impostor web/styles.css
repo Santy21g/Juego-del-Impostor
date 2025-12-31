@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.panel {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 14px;
+  color: #ccc;
+}
+
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  background: #2e2e2e;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+/* cuando ya se seleccionó algo */
+select.selected {
+  background: #145c2a; /* verde oscuro */
+}
+
+.actions {
+  margin-bottom: 25px;
+}
+
+button {
+  margin: 5px;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.start {
+  background: #007bff;
+}
+.start:hover {
+  background: #0069d9;
+}
+
+.new-round {
+  background: #ffc107;
+  color: black;
+}
+.new-round:hover {
+  background: #e0a800;
+}
+
+button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+.players {
+  margin-top: 30px;
+}
+
+.player {
+  margin: 12px;
+}
+
+.player span {
+  display: block;
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.crossed {
+  text-decoration: line-through;
+  color: rgb(128, 128, 128);
+}
+
+/* Botones de jugadores */
+.player button {
+  background: #f1f1f1;
+  color: #111;              /* TEXTO OSCURO */
+  font-weight: bold;
+}
+
+/* Hover */
+.player button:hover {
+  background: #e0e0e0;
+}
+
+/* Cuando está revelando */
+.player button.active {
+  background: #007bff;
+  color: white;             /* TEXTO BLANCO */
+}
+
+/* Cuando ya fue usado */
+.player button.crossed {
+  background: #555;
+  color: #bbb;              /* TEXTO GRIS */
+  text-decoration: line-through;
+}
+
+/* Deshabilitado */
+.player button:disabled {
+  cursor: not-allowed;
+}
